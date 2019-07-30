@@ -5,11 +5,13 @@ import { useSpring, animated } from "react-spring";
 import "./styles.css";
 
 function App() {
+  const props = useSpring({ opacity: 1, from: { opacity: 0 } });
+
   return (
-    <div className="App">
+    <animated.div className="App" style={props}>
       <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+      <h2>Start editing to see some magic happesn!</h2>
+    </animated.div>
   );
 }
 
