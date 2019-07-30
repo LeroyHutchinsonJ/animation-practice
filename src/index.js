@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { useSpring, animated } from "react-spring";
+import Component from "./component";
 
 import "./styles.css";
 
 function App() {
-  const props = useSpring({ opacity: 1, from: { opacity: 0 } });
+  const props = useSpring({ color: "green", from: { color: "blue" } });
 
   return (
     <animated.div className="App" style={props}>
