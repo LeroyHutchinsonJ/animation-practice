@@ -2,13 +2,18 @@ import React from "react";
 import { useSpring, animated } from "react-spring";
 
 export default function Component() {
-  const props = useSpring({ color: "green", from: { color: "blue" } });
+  const props = useSpring({
+    to: { marginTop: 0 },
+    from: { marginTop: -500 }
+  });
 
   return (
-    <div className="App" style={c1Style}>
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happesn!</h2>
-    </div>
+    <animated.div style={props}>
+      <div className="App" style={c1Style}>
+        <h1>Hello CodeSandbox</h1>
+        <h2>Start editing to see some magic happesn!</h2>
+      </div>
+    </animated.div>
   );
 }
 

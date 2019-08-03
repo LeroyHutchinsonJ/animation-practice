@@ -18,5 +18,6 @@ const c1Style = {
   color: "white",
   padding: "1.5rem"
 };
+
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
