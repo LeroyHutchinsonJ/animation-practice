@@ -1,12 +1,12 @@
-import React, { Children } from "react";
-import { useSpring, animated, config } from "react-spring";
+import React from "react";
+import { useSpring, animated } from "react-spring";
 import { Spring } from "react-spring/renderprops";
 
 var AnimatedPart = words => {
   var props = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },
-    config: { duration: 1000 },
+    config: { duration: 1500 },
     delay: 1000
   });
   return (
@@ -20,13 +20,7 @@ class Component2 extends React.Component {
   render() {
     return (
       <AnimatedPart>
-        <Spring
-          from={{ number: 1 }}
-          to={{ number: 10 }}
-          config={{ delay: 1000, duration: 10000 }}
-        >
-          {props => <div style={numberStyle}>{props.number.toFixed()}</div>}
-        </Spring>
+        <h1>Component 2</h1>
       </AnimatedPart>
     );
   }
@@ -37,13 +31,5 @@ const c2Style = {
   color: "white",
   padding: "1.5rem"
 };
-const numberStyle = {
-  background: "#333",
-  color: "white",
-  padding: "1.5rem",
-  borderRadius: "100%",
-  width: "30px",
-  textAlign: "center",
-  margin: "auto"
-};
+
 export default Component2;
