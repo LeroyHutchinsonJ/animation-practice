@@ -1,16 +1,24 @@
 import React from "react";
-import { useSpring, animated } from "react-spring";
+import { useSpring, animated, config } from "react-spring";
 
-export default function Component2() {
+var AnimatedPart = () => {
   var props = useSpring({
+    from: { marginTop: -500 },
     to: { marginTop: 0 },
-    from: { marginTop: -500 }
+    config: { duration: 2000 },
+    delay: 1000
   });
   return (
     <animated.div style={props}>
       <div style={c2Style}>Check</div>
     </animated.div>
   );
+};
+
+class Component2 extends React.Component {
+  render() {
+    return <AnimatedPart />;
+  }
 }
 
 const c2Style = {
@@ -18,3 +26,4 @@ const c2Style = {
   color: "white",
   padding: "1.5rem"
 };
+export default Component2;

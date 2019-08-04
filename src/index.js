@@ -8,8 +8,8 @@ import "./styles.css";
 function App() {
   return (
     <div className="App">
-      <Component1 />
-      <Component2 />
+      <Component1 className="component1" />
+      <Component2 className="component2" />
     </div>
   );
 }

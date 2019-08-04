@@ -1,6 +1,7 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
 
+//First way to useSpring works only with functions
 export default function Component1() {
   const props = useSpring({
     to: { marginTop: 0 },
