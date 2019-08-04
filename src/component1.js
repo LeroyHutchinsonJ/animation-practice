@@ -6,7 +6,7 @@ var AnimatedPart = words => {
   var props = useSpring({
     from: { marginTop: -500 },
     to: { marginTop: 0 },
-    config: { duration: 750 },
+    config: { duration: 1000 },
     delay: 500
   });
   return (
@@ -25,7 +25,7 @@ class Component1 extends React.Component {
         <Spring
           from={{ number: 1 }}
           to={{ number: 10 }}
-          config={{ delay: 1000, duration: 10000 }}
+          config={{ delay: 3500, duration: 10000 }}
         >
           {props => <div style={numberStyle}>{props.number.toFixed()}</div>}
         </Spring>

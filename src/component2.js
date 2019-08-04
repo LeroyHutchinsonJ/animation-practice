@@ -1,13 +1,12 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
-import { Spring } from "react-spring/renderprops";
 
 var AnimatedPart = words => {
   var props = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },
-    config: { duration: 1500 },
-    delay: 1000
+    config: { duration: 1000 },
+    delay: 0 //13500
   });
   return (
     <animated.div style={props}>
@@ -21,6 +20,9 @@ class Component2 extends React.Component {
     return (
       <AnimatedPart>
         <h1>Component 2</h1>
+        <button style={buttonStyle}>
+          <h2>Press Me To See Component 3</h2>
+        </button>
       </AnimatedPart>
     );
   }
@@ -31,5 +33,10 @@ const c2Style = {
   color: "white",
   padding: "1.5rem"
 };
-
+const buttonStyle = {
+  color: "white",
+  border: "none",
+  background: "#333",
+  padding: "20px"
+};
 export default Component2;
