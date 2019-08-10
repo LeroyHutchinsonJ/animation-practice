@@ -25,8 +25,8 @@ class Component2 extends React.Component {
           <button style={buttonStyle}>
             <h2>Press Me To See Component 3</h2>
           </button>
-          <Component3 style={buttonStyle}>asasdadsf</Component3>
         </AnimatedPart>
+        <Component3 />
       </>
     );
   }
@@ -44,9 +44,4 @@ const buttonStyle = {
   padding: "20px"
 };
 
-const c3Style = {
-  background: "green",
-  color: "white",
-  padding: "1.5rem"
-};
 export default Component2;
