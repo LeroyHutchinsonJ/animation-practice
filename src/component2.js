@@ -1,5 +1,6 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
+import Component3 from "./component3";
 
 var AnimatedPart = words => {
   var props = useSpring({
@@ -18,12 +19,15 @@ var AnimatedPart = words => {
 class Component2 extends React.Component {
   render() {
     return (
-      <AnimatedPart>
-        <h1>Component 2</h1>
-        <button style={buttonStyle}>
-          <h2>Press Me To See Component 3</h2>
-        </button>
-      </AnimatedPart>
+      <>
+        <AnimatedPart>
+          <h1>Component 2</h1>
+          <button style={buttonStyle}>
+            <h2>Press Me To See Component 3</h2>
+          </button>
+          <Component3 style={buttonStyle}>asasdadsf</Component3>
+        </AnimatedPart>
+      </>
     );
   }
 }
@@ -38,5 +42,11 @@ const buttonStyle = {
   border: "none",
   background: "#333",
   padding: "20px"
+};
+
+const c3Style = {
+  background: "green",
+  color: "white",
+  padding: "1.5rem"
 };
 export default Component2;
