@@ -15,7 +15,18 @@ var AnimatedPart = words => {
     </animated.div>
   );
 };
+//When the button is clicked
 
+//A function happens that tells the program to make component 3 visible
+
+//So i do this by setting a visibility prop in component 3
+
+//Set the opacity equal to the visibility prop, which is defaulted to 0
+
+//Create a function here in the class component 2
+
+//Create a visibility variable here and set it to 0
+// When the function is called the visibility variable is set to 1
 class Component2 extends React.Component {
   render() {
     return (
