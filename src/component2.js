@@ -28,16 +28,29 @@ var AnimatedPart = words => {
 //Create a visibility variable here and set it to 0
 // When the function is called the visibility variable is set to 1
 class Component2 extends React.Component {
+  state = {
+    visibility: 0,
+    setVisibility: 0
+  };
+
+  component3Appear() {
+    var checker = this.state.setVisibility % 2 === 0 ? 1 : 0;
+    console.log(checker);
+
+    this.setState({ setVisibility: this.state.setVisibility + 1 });
+    this.setState({ visibility: checker });
+  }
   render() {
+    var { visibility } = this.state;
     return (
       <>
         <AnimatedPart>
           <h1>Component 2</h1>
-          <button style={buttonStyle}>
+          <button style={buttonStyle} onClick={() => this.component3Appear()}>
             <h2>Press Me To See Component 3</h2>
           </button>
         </AnimatedPart>
-        <Component3 />
+        <Component3 visibility={visibility} />
       </>
     );
   }
