@@ -35,7 +35,6 @@ class Component2 extends React.Component {
 
   component3Appear() {
     var checker = this.state.setVisibility % 2 === 0 ? 1 : 0;
-    console.log(checker);
 
     this.setState({ setVisibility: this.state.setVisibility + 1 });
     this.setState({ visibility: checker });
