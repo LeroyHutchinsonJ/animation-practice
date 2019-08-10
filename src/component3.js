@@ -1,11 +1,10 @@
 import React from "react";
 
-var Component3 = ({ visibility = 0 }) => {
+var Component3 = () => {
   const c3Style = {
     background: "green",
     color: "white",
-    padding: "1.5rem",
-    opacity: visibility
+    padding: "1.5rem"
   };
   //Default opacity,set it inside the c3Style object
   return (

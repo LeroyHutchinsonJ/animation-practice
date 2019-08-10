@@ -2,24 +2,42 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Component1 from "./component1";
 import Component2 from "./component2";
+import Component3 from "./component3";
+import { Spring, Transition, animated } from "react-spring/renderprops";
 
 import "./styles.css";
 
-function App() {
-  return (
-    <div className="App">
-      <Component1 className="component1" />
-      <Component2 className="component2" />
-    </div>
-  );
-}
+class App extends React.Component {
+  state = {
+    showComponent3: false
+  };
 
-//So you can use objects to implement styles in components, interesting
-const c1Style = {
-  background: "steelblue",
-  color: "white",
-  padding: "1.5rem"
-};
+  toggleFunction = () => {
+    console.log(this.state.showComponent3);
+    this.setState({ showComponent3: !this.state.showComponent3 });
+  };
+  render() {
+    return (
+      <div className="App">
+        <Component1 />
+        <Component2 toggle={() => this.toggleFunction()} />
+        <Transition
+          native
+          items={this.state.showComponent3}
+          from={{ opacity: 0 }}
+          enter={{ opacity: 1 }}
+          leave={{ opacity: 0 }}
+        >
+          {show => show && (props => (
+              <animated.div style={props}>
+                <Component3 />
+              </animated.div>
+            ))}
+        </Transition>
+      </div>
+    );
+  }
+}
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
