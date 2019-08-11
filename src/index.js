@@ -14,7 +14,8 @@ var AnimateComponent3 = show => {
   var transitions = useTransition(show, item => item.key, {
     from: { opacity: 0 },
     enter: { opacity: 1 },
-    to: { opacity: 0 }
+    leave: { opacity: 0 },
+    config: { duration: 1000 }
   });
 
   return transitions.map(
@@ -30,7 +31,7 @@ var AnimateComponent3 = show => {
 
 class App extends React.Component {
   state = {
-    showComponent3: false
+    showComponent3: true
   };
 
   toggleFunction = () => {
