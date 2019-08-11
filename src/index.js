@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import ReactDOM from "react-dom";
 
 import Component1 from "./component1";
@@ -10,7 +11,7 @@ import { useTransition, animated, Transition } from "react-spring";
 import "./styles.css";
 
 var AnimateComponent3 = show => {
-  var transitions = useTransition(show, null, {
+  var transitions = useTransition(show, item => item.key, {
     from: { opacity: 0 },
     enter: { opacity: 1 },
     to: { opacity: 0 }
@@ -21,7 +22,7 @@ var AnimateComponent3 = show => {
       item.show && (
         <animated.div key={key} style={props}>
           <Component3 />
-          {console.log(item.show)}
+          {console.log(item)}
         </animated.div>
       )
   );

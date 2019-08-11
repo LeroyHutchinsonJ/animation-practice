@@ -31,7 +31,8 @@ class Component2 extends React.Component {
 const c2Style = {
   background: "red",
   color: "white",
-  padding: "1.5rem"
+  padding: "1.5rem",
+  border: "none"
 };
 const buttonStyle = {
   color: "white",

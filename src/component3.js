@@ -4,7 +4,8 @@ var Component3 = () => {
   const c3Style = {
     background: "green",
     color: "white",
-    padding: "1.5rem"
+    padding: "1.5rem",
+    border: "none"
   };
   //Default opacity,set it inside the c3Style object
   return (

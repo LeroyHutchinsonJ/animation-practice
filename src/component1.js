@@ -38,7 +38,8 @@ class Component1 extends React.Component {
 const c1Style = {
   background: "steelblue",
   color: "white",
-  padding: "1.5rem"
+  padding: "1.5rem",
+  border: "none"
 };
 const numberStyle = {
   background: "#333",
